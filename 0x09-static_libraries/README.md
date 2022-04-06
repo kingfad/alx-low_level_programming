@@ -209,8 +209,3 @@ julien@ubuntu:~/0x09. Static Librairies$ ar -t liball.a
 9-strcpy.o
 _putchar.o
 julien@ubuntu:~/0x09. Static Librairies$
-Repo:
-
-GitHub repository: alx-low_level_programming
-Directory: 0x09-static_libraries
-File: create_static_lib.sh
