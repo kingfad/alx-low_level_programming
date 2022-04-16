@@ -1,26 +1,30 @@
-#ifndef VARIADIC_FUNCTION_H
-#define VARIADIC_FUNCTION_H
+#ifndef VARIADIC_FUNCTIONS_H
+#define VARIADIC_FUNCTIONS_H
+
+/*
+ * File: variadic_functions.h
+ * Desc: Header file containing prototypes for all functions
+ * used in the 0x0F-variadic_functions directory.
+ */
+
 #include <stdarg.h>
+
+/**
+ * struct printer - A new struct type defining a printer.
+ * @symbol: A symbol representing a data type.
+ * @print: A function pointer to a function that prints
+ * a data type corresponding to symbol.
+ */
+typedef struct printer
+{
+		char *symbol;
+			void (*print)(va_list arg);
+
+} printer_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-int _putchar(char c);
-
-void print_int(va_list ap);
-void print_float(va_list ap);
-void print_char(va_list ap);
-void print_str(va_list ap);
-/**
-* struct printAnything - structure definition of a printAnything struct
-* @type: type
-* @func: function to print
-*/
-typedef struct Type
-{
-	char *type;
-	void (*func)(va_list);
-} Type;
 
 #endif
